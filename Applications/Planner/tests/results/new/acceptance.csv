@@ -1,0 +1,11 @@
+check,result,detail
+"40/40 规划成功","PASS","成功 40/40（失败 0）"
+"每条路径独立真值最小清障>=14.9cm","PASS","最小 15.00cm（MATL_STORAGE -> HOME @ (105.0,42.8)cm），低于门限路径数 0"
+"起点与请求精确一致(<=1e-003 cm)","PASS","最大误差 0.000017cm"
+"终点与请求精确一致(<=1e-003 cm)","PASS","最大误差 0.000017cm"
+"路径相邻点无重复(间距>1e-003 cm)","PASS","最小相邻间距 14.1421cm"
+"Planner_PathValidate(15cm)通过且与独立真值差<=0.6cm","PASS","validate失败 0 条，最大差 0.0000cm"
+"stats.length 与独立测量长度差<=0.5cm","PASS","最大差 0.0000cm"
+"独立障碍数据 vs MapCore 清障场逐格偏差<=0.1cm","PASS","最大偏差 0.0000cm（zone1=0.0000，zone2=0.0000）"
+"逐路径验收断言总失败项","PASS","累计 0 项"
+"tier 分布","INFO","zone1 soft=2 tight=18；zone2 soft=2 tight=18"

@@ -1,0 +1,95 @@
+# ============================================================================
+# T-Car（Hurri-Cargo）Git 忽略规则
+#
+# 原则：只忽略"构建产物 / IDE 本机配置 / 临时验证文件 / Python 缓存"；
+#       源码、工程配置（.eide、.uvprojx、.sct）、Planner tests 与报告都要提交。
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# 构建产物（EIDE / Keil MDK / ARM 编译中间文件）
+# ---------------------------------------------------------------------------
+build/
+UserTemp/
+MDK-ARM/RTE/
+MDK-ARM/DebugConfig/
+MDK-ARM/Hurri-Cargo_Code/
+MDK-ARM/*.lst
+MDK-ARM/*.scvd
+MDK-ARM/*.dep
+MDK-ARM/*.map
+MDK-ARM/*.htm
+MDK-ARM/*.log
+MDK-ARM/armlib_lock_glue.c
+MDK-ARM/stm32_lock.h
+MDK-ARM/**/*.o
+MDK-ARM/**/*.d
+MDK-ARM/**/*.axf
+MDK-ARM/**/*.hex
+MDK-ARM/**/*.bin
+keilkilll.bat
+
+# 通用编译中间产物（主机端测试/仿真也会产生）
+*.o
+*.obj
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.d
+
+# ---------------------------------------------------------------------------
+# IDE / 编辑器本机配置
+# 注意：.vscode/tasks.json 是团队共享任务配置，不整体忽略 .vscode
+# ---------------------------------------------------------------------------
+.idea/
+.vs/
+.vscode/ipch/
+.vscode/*.log
+# vision/ 内嵌的 VSCode 配置只与本机 Python/conda 环境有关，不入库
+vision/.vscode/
+*.uvguix.*
+*.uvoptx.bak
+*.bak
+*~
+
+# 项目已有约定：.trae 为本地规则目录，.cmsis 为本地工具链缓存目录
+.trae/
+.cmsis/
+
+# ---------------------------------------------------------------------------
+# 本机临时 / 验证产物（Planner 重构时的编译验证目录）
+# ---------------------------------------------------------------------------
+.planner_verify/
+.verify_oa_pass/
+.verify_pass/
+tools/__pycache__/
+tools/.nav_freq_selftest_*/
+tools/_tmp_*
+Applications/nav/tools/.write_test
+
+# 主机端测试若在仓库内直接编译，产物也不入库（tests 源码与报告要提交）
+Applications/Planner/tests/**/build/
+Applications/Planner/tests/**/*.exe
+Applications/Planner/tests/**/*.o
+Applications/Planner/tests/**/__pycache__/
+
+# ---------------------------------------------------------------------------
+# Python（Applications/Planner/pytools、tests 下的脚本）
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# ---------------------------------------------------------------------------
+# 操作系统杂项
+# ---------------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 本轮整定交付的固件产物目录（hex/bin 已由 *.hex/*.bin 忽略，这里忽略同目录的构建摘要/manifest）
+data/firmware_build/

@@ -1,0 +1,61 @@
+# T-Car 代码格式化规则
+# 适配现有项目风格: 4 空格缩进 / 大括号跟随 / 指针右靠
+Language: Cpp
+Standard: c++17
+
+BasedOnStyle: LLVM
+
+# 缩进: 4 空格, 不使用 Tab
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# 大括号: 跟随语句 (K&R / Attach)
+BreakBeforeBraces: Attach
+
+# 指针/引用靠右: char *argv[]
+PointerAlignment: Right
+ReferenceAlignment: Right
+
+# 行宽: 120 列
+ColumnLimit: 120
+
+# 超过列宽容忍度, 避免过度换行
+PenaltyReturnTypeOnItsOwnLine: 200
+
+# 允许单行简短语句: if (!is_init) return false;
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+
+# 函数参数/调用参数换行时, 每个参数独占一行并缩进对齐
+BinPackArguments: false
+BinPackParameters: false
+AlignAfterOpenBracket: Align
+
+# case 标签不额外缩进
+IndentCaseLabels: false
+
+# 预处理指令不缩进 (#if / #define / #include 顶格)
+IndentPPDirectives: None
+
+# 不自动重排 #include (保持现有分组与顺序)
+SortIncludes: Never
+IncludeBlocks: Preserve
+
+# 不重排注释 (避免破坏中文注释与 @brief 排版)
+ReflowComments: false
+
+# 空行: 最多保留 1 个连续空行
+MaxEmptyLinesToKeep: 1
+
+# 空行控制: 块首不保留空行
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# 赋值/宏/注释不做强制对齐, 保留手动排版
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignConsecutiveMacros: false
+AlignTrailingComments: false

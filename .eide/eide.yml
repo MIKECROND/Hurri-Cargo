@@ -1,0 +1,476 @@
+version: "4.1"
+name: Hurri-Cargo_Code
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Application
+      files: []
+      folders:
+        - name: MDK-ARM
+          files:
+            - path: MDK-ARM/startup_stm32f407xx.s
+            - path: MDK-ARM/armlib_lock_glue.c
+          folders: []
+        - name: User
+          files: []
+          folders:
+            - name: Core
+              files:
+                - path: Core/Src/main.c
+                - path: Core/Src/gpio.c
+                - path: Core/Src/freertos.c
+                - path: Core/Src/adc.c
+                - path: Core/Src/dma.c
+                - path: Core/Src/iwdg.c
+                - path: Core/Src/tim.c
+                - path: Core/Src/usart.c
+                - path: Core/Src/stm32f4xx_it.c
+                - path: Core/Src/stm32f4xx_hal_msp.c
+                - path: Core/Src/stm32f4xx_hal_timebase_tim.c
+                - path: Core/Src/spi.c
+              folders: []
+    - name: Drivers
+      files: []
+      folders:
+        - name: STM32F4xx_HAL_Driver
+          files:
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_iwdg.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+            - path: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
+          folders: []
+        - name: CMSIS
+          files:
+            - path: Core/Src/system_stm32f4xx.c
+          folders: []
+        - name: User
+          files: []
+          folders:
+            - name: MISC
+              files:
+                - path: Drivers/User/MISC/message.c
+              folders: []
+            - name: RPI
+              files:
+                - path: Drivers/User/RPI/rpi_port.c
+              folders:
+                - name: tools
+                  files:
+                    - path: Drivers/User/RPI/tools/rpi_tools.c
+                  folders: []
+            - name: RTOS
+              files:
+                - path: Drivers/User/RTOS/rtos_utils.c
+              folders: []
+            - name: SCANNER
+              files:
+                - path: Drivers/User/SCANNER/scan_driver.c
+              folders:
+                - name: tools
+                  files:
+                    - path: Drivers/User/SCANNER/tools/scan_tools.c
+                  folders: []
+            - name: STEP
+              files:
+                - path: Drivers/User/STEP/step_port_dlc.c
+                - path: Drivers/User/STEP/zdt_v5_port.c
+                - path: Drivers/User/STEP/zdt-v5-driver/drv/zdt_v5_drv.c
+                - path: Drivers/User/STEP/zdt-v5-driver/drv/zdt_v5_engine.c
+              folders: []
+            - name: LCD
+              files:
+                - path: Drivers/User/LCD/lcd_port.c
+              folders:
+                - name: utils
+                  files:
+                    - path: Drivers/User/LCD/utils/stm32_adafruit_lcd.c
+                  folders:
+                    - name: io_spi
+                      files:
+                        - path: Drivers/User/LCD/utils/io_spi/lcd_io_spi_hal.c
+                      folders: []
+                    - name: Fonts
+                      files:
+                        - path: Drivers/User/LCD/utils/Fonts/font8.c
+                        - path: Drivers/User/LCD/utils/Fonts/font12.c
+                        - path: Drivers/User/LCD/utils/Fonts/font16.c
+                        - path: Drivers/User/LCD/utils/Fonts/font20.c
+                        - path: Drivers/User/LCD/utils/Fonts/font24.c
+                        - path: Drivers/User/LCD/utils/Fonts/font120.c
+                        - path: Drivers/User/LCD/utils/Fonts/font_zh.c
+                        - path: Drivers/User/LCD/utils/Fonts/font_note.c
+                      folders: []
+                - name: lcd
+                  files:
+                    - path: Drivers/User/LCD/lcd/ili9488.c
+                  folders: []
+                - name: tools
+                  files:
+                    - path: Drivers/User/LCD/tools/lcd_tools.c
+                  folders: []
+            - name: SERVO
+              files:
+                - path: Drivers/User/SERVO/servo_port.c
+              folders:
+                - name: BUS_SERVO
+                  files:
+                    - path: Drivers/User/SERVO/BUS_SERVO/utils/servo_driver.c
+                    - path: Drivers/User/SERVO/BUS_SERVO/utils/servo_uart.c
+                  folders:
+                    - name: tools
+                      files:
+                        - path: Drivers/User/SERVO/BUS_SERVO/tools/servo_tools.c
+                      folders: []
+                    - name: utils
+                      files: []
+                      folders:
+                        - name: protocol
+                          files:
+                            - path: Drivers/User/SERVO/BUS_SERVO/utils/protocol/servo_protocol.c
+                          folders: []
+                - name: PWM_SERVO
+                  files: []
+                  folders:
+                    - name: tools
+                      files:
+                        - path: Drivers/User/SERVO/PWM_SERVO/tools/pwm_servo_tools.c
+                      folders: []
+                    - name: utils
+                      files:
+                        - path: Drivers/User/SERVO/PWM_SERVO/utils/pwm_servo_driver.c
+                      folders: []
+            - name: DIP_SW
+              files:
+                - path: Drivers/User/DIP_SW/DIP_Switch.c
+              folders: []
+            - name: KEY
+              files:
+                - path: Drivers/User/KEY/Key.c
+              folders: []
+            - name: BUZZER
+              files:
+                - path: Drivers/User/BUZZER/buzzer.c
+                - path: Drivers/User/BUZZER/buzzer_sheet.c
+              folders: []
+            - name: BATTERY
+              files:
+                - path: Drivers/User/BATTERY/Battery.c
+              folders: []
+    - name: Middlewares
+      files: []
+      folders:
+        - name: FreeRTOS
+          files:
+            - path: Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/list.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/queue.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/timers.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+            - path: Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+          folders: []
+        - name: Library
+          files: []
+          folders:
+            - name: DSP Library
+              files: []
+              folders:
+                - name: DSP Library
+                  files:
+                    - path: Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib
+                  folders: []
+    - name: ::CMSIS
+      files: []
+      folders: []
+    - name: App
+      files: []
+      folders:
+        - name: chassis
+          files:
+            - path: Applications/chassis/chassis.c
+            - path: Applications/chassis/motion/motion_control.c
+            - path: Applications/chassis/kinematics/kinematics.c
+          folders: []
+        - name: letter_shell
+          files:
+            - path: Applications/letter_shell/shell_port.c
+            - path: Applications/letter_shell/src/shell.c
+            - path: Applications/letter_shell/src/shell_cmd_list.c
+            - path: Applications/letter_shell/src/shell_companion.c
+            - path: Applications/letter_shell/src/shell_ext.c
+            - path: Applications/letter_shell/shell_enhance/shell_cmd_group.c
+            - path: Applications/letter_shell/log/log.c
+          folders: []
+        - name: nav
+          files:
+            - path: Applications/nav/nav_map_data.c
+          folders:
+            - name: tools
+              files:
+                - path: Applications/nav/tools/nav_tools.c
+              folders: []
+            - name: localization
+              files:
+                - path: Applications/nav/localization/nav_local.c
+              folders: []
+            - name: utils
+              files:
+                - path: Applications/nav/utils/nav_math.c
+                - path: Applications/nav/utils/nav_core.c
+                - path: Applications/nav/utils/nav_map.c
+              folders: []
+        - name: OPS
+          files:
+            - path: Drivers/User/OPS/ops.c
+          folders: []
+        - name: PLANNER
+          files:
+            - path: Applications/Planner/planner_port.c
+            - path: Applications/Planner/utils/Cstar_map_core.c
+            - path: Applications/Planner/utils/planner_algo.c
+            - path: Applications/Planner/utils/priority_queue.c
+            - path: Applications/Planner/tools/planner_tools.c
+          folders: []
+        - name: mission
+          files:
+            - path: Applications/mission/mission.c
+          folders:
+            - name: utils
+              files:
+                - path: Applications/mission/utils/mission_code.c
+                - path: Applications/mission/utils/mission_nav.c
+                - path: Applications/mission/utils/mission_ui.c
+                - path: Applications/mission/utils/mission_arm.c
+                - path: Applications/mission/utils/mission_route.c
+              folders: []
+            - name: tools
+              files:
+                - path: Applications/mission/tools/mission_tools.c
+              folders: []
+        - name: arm
+          files: []
+          folders:
+            - name: utils
+              files:
+                - path: Applications/arm/utils/arm_ctrl.c
+                - path: Applications/arm/utils/arm_kinematics.c
+                - path: Applications/arm/utils/arm_action.c
+                - path: Applications/arm/utils/arm_motion.c
+              folders: []
+            - name: tools
+              files:
+                - path: Applications/arm/tools/arm_tools.c
+              folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 57df7b3bfbf9d93bafc136ebfae1716d
+targets:
+  Hurri-Cargo_Code:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_HAL_DRIVER
+        - STM32F407xx
+        - STM32_THREAD_SAFE_STRATEGY=4
+        - USE_WG=0
+      incList:
+        - Core/Inc
+        - Drivers/STM32F4xx_HAL_Driver/Inc
+        - Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+        - Middlewares/Third_Party/FreeRTOS/Source/include
+        - Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+        - Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F
+        - Drivers/CMSIS/Device/ST/STM32F4xx/Include
+        - Drivers/CMSIS/Include
+        - Drivers/User/ADC
+        - Drivers/User/MISC
+        - Drivers/User/OPS
+        - Drivers/User/RTOS
+        - Drivers/User/SCANNER
+        - Drivers/User/STEP
+        - Applications/chassis
+        - Applications/letter_shell
+        - Applications/nav
+        - Middlewares/ST/ARM/DSP/Inc
+        - Applications/Planner
+        - Applications/Planner/tools
+        - Applications/Planner/utils
+        - Applications/letter_shell/log
+        - Applications/letter_shell/shell_enhance
+        - Applications/letter_shell/src
+        - .cmsis/include
+        - MDK-ARM/RTE/_Hurri-Cargo_Code
+        - Drivers/User/STEP/zdt-v5-driver
+        - Drivers/User/STEP/zdt-v5-driver/ci/stubs
+        - Drivers/User/STEP/zdt-v5-driver/core
+        - Drivers/User/STEP/zdt-v5-driver/drv
+        - Applications/chassis/motion
+        - Applications/chassis/kinematics
+        - Applications/nav/utils
+        - Applications/nav/localization
+        - Drivers/User/RPI
+        - Drivers/User/LCD
+        - Drivers/User/LCD/utils
+        - Drivers/User/LCD/utils/Fonts
+        - Drivers/User/LCD/utils/io_spi
+        - Drivers/User/LCD/lcd
+        - Drivers/User/LCD/tools
+        - Applications/mission
+        - Applications/arm
+        - Applications/arm/tools
+        - Applications/arm/utils
+        - Applications/mission/utils
+        - Drivers/User/DIP_SW
+        - Drivers/User/KEY
+        - Drivers/User/BUZZER
+        - Drivers/User/DMD
+        - Drivers/User/RPI/tools
+        - Drivers/User/SERVO
+        - Drivers/User/SERVO/BUS_SERVO/tools
+        - Drivers/User/SERVO/BUS_SERVO/utils
+        - Drivers/User/SERVO/BUS_SERVO/utils/protocol
+        - Drivers/User/SERVO/PWM_SERVO/tools
+        - Drivers/User/SERVO/PWM_SERVO/utils
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-2
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x1c000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: true
+              mem:
+                size: "0x4000"
+                startAddr: "0x2001c000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: stm32f4x
+    uploader: OpenOCD

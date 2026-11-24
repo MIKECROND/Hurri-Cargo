@@ -1,0 +1,15 @@
+# 冻结基线清单（host-side nav simulator）
+#
+# 用途：Applications/nav/tests/harness/run_sim.ps1 每次运行都会用
+#       `git show <commit>:<path>` 把改动前的 nav 源码导出到 %TEMP%\nav_harness\baseline_src\，
+#       并按下面的 SHA-256 逐个校验；校验失败即中止（防止基线被悄悄替换导致前后对比失真）。
+#       同样的哈希也固化在 run_sim.ps1 的 $BaselineFiles 中，两处需同时修改。
+#
+# commit : b6f3ddb40c25e5e7085af1388425e2570a07e12a
+# date   : 2026-11-13 04:54:47 +0800
+# subject: fix(mission): 修正暂存区X方向校准偏移值及粗加工区坐标
+#
+# sha256                                                            path
+4cbee425052b01af76b633da8189173a788ceeeeaea71bc5751fc1bcd8d05ae1  Applications/nav/utils/nav_core.c
+8899ff92c4e299fc6d75de0f3338363473975c4ca13fa4ea403fff678fb14538  Applications/nav/utils/nav_core.h
+a18f4789bfac6490959e448059c3b158ff39d9957e1df8185adcaa8cddff8bc0  Applications/nav/nav_config.h

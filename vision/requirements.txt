@@ -1,0 +1,7 @@
+# 树莓派端视觉（vision/）运行依赖
+# 安装：在树莓派上进入 vision/ 目录后执行 pip install -r requirements.txt
+# 说明：main.py 通过 OpenCV 打开 USB 摄像头（V4L2）并显示窗口，因此使用带 GUI 的 opencv-python
+
+opencv-python>=4.5
+numpy>=1.20
+pyserial>=3.5

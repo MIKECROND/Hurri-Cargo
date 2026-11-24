@@ -1,0 +1,23 @@
+; ******************************************************************
+; *** Scatter-Loading Description File (Customized)
+; *** Base: Embedded IDE generated layout (IROM1/IRAM1/IRAM2)
+; *** Mod : planner_port.o 的 .bss.map_sram2 (地图网格) 固定放入
+; ***       RW_IRAM2 = SRAM2 @0x2001C000 (16KB, CPU 独占, 无 DMA)
+; ******************************************************************
+
+LR_IROM1 0x08000000 0x00100000 {
+	ER_IROM1 0x08000000 0x00100000 {
+		*.o (RESET, +First) 
+		*(InRoot$$Sections) 
+		.ANY (+RO) 
+		.ANY (+XO) 
+	}
+	RW_IRAM1 0x20000000 0x0001c000 {
+		.ANY (+RW +ZI) 
+	}
+	RW_IRAM2 0x2001c000 0x00004000 {
+		planner_port.o (.bss.map_sram2, +First)
+	planner_algo.o (.bss.map_sram2)
+		.ANY (+RW +ZI) 
+	}
+}

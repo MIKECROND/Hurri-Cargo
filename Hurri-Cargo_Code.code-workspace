@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.mouseWheelZoom": true
+    },
+	"extensions": {},
+	"trae": {
+		"workspaceId": "a0bf44fd9169cdc9cc9384c9234762c4"
+	}
+}

@@ -1,0 +1,4 @@
+# 第三方库 letter_shell，禁止格式化
+# 该目录下的文件不参与项目统一的 clang-format 规则
+DisableFormat: true
+SortIncludes: false

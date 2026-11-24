@@ -1,0 +1,161 @@
+{
+  "format_version": 1,
+  "color_space": "OpenCV_HSV",
+  "camera_device": "0",
+  "image_width": 1280,
+  "image_height": 720,
+  "calibration_file": "G:\\2027工创赛\\视觉\\config\\realtek_rgb_camera.yaml",
+  "colors": [
+    {
+      "color_id": 1,
+      "name": "red",
+      "display_bgr": [
+        0,
+        0,
+        255
+      ],
+      "ranges": [
+        {
+          "lower": [
+            0,
+            94,
+            102
+          ],
+          "upper": [
+            9,
+            236,
+            179
+          ]
+        },
+        {
+          "lower": [
+            175,
+            94,
+            102
+          ],
+          "upper": [
+            179,
+            236,
+            179
+          ]
+        }
+      ]
+    },
+    {
+      "color_id": 2,
+      "name": "yellow",
+      "display_bgr": [
+        0,
+        255,
+        255
+      ],
+      "ranges": [
+        {
+          "lower": [
+            24,
+            164,
+            116
+          ],
+          "upper": [
+            34,
+            255,
+            192
+          ]
+        }
+      ]
+    },
+    {
+      "color_id": 3,
+      "name": "blue",
+      "display_bgr": [
+        255,
+        0,
+        0
+      ],
+      "ranges": [
+        {
+          "lower": [
+            107,
+            146,
+            100
+          ],
+          "upper": [
+            119,
+            255,
+            179
+          ]
+        }
+      ]
+    },
+    {
+      "color_id": 4,
+      "name": "green",
+      "display_bgr": [
+        0,
+        255,
+        0
+      ],
+      "ranges": [
+        {
+          "lower": [
+            65,
+            108,
+            99
+          ],
+          "upper": [
+            78,
+            229,
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "color_id": 5,
+      "name": "black",
+      "display_bgr": [
+        80,
+        80,
+        80
+      ],
+      "ranges": [
+        {
+          "lower": [
+            0,
+            0,
+            0
+          ],
+          "upper": [
+            179,
+            173,
+            86
+          ]
+        }
+      ]
+    },
+    {
+      "color_id": 6,
+      "name": "light_blue",
+      "display_bgr": [
+        255,
+        255,
+        0
+      ],
+      "ranges": [
+        {
+          "lower": [
+            97,
+            169,
+            109
+          ],
+          "upper": [
+            108,
+            255,
+            181
+          ]
+        }
+      ]
+    }
+  ],
+  "saved_at_utc": "2026-09-28T02:18:38.680779+00:00"
+}
